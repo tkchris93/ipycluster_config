@@ -20,7 +20,8 @@ rc[:].apply_sync(socket.gethostname)
 ```
 `
 ### Basics of `ipyparallel`
-Call a function across all engines in a view. In the example below, `view` is a View containing all engines and `one` is a View containing just engine 1.
+##### Call a function across all engines in a view. 
+In the example below, `view` is a View containing all engines and `one` is a View containing just engine 1.
 ```
 import ipyparallel as ipp
 rc = ipp.Client()
