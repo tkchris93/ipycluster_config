@@ -37,3 +37,21 @@ print a.get()
 b = one.apply(foo)
 print b.get()
 ```
+##### Send a time-consuming process to one engine
+```
+def wait(n):
+    import time
+    time.sleep(n)
+    return n
+    
+a = view.apply_async(wait, 5)
+
+# The following will block execution till it's done
+a.get()
+
+# To check to see if it's done executing (non-blocking)
+a.ready()
+
+# Try to store result, but only block execution for n seconds
+a.get(n)
+```
