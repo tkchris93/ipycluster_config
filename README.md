@@ -55,3 +55,12 @@ a.ready()
 # Try to store result, but only block execution for n seconds
 a.get(n)
 ```
+
+### When connecting
+To avoid updating the connection info all the time, start the `ipcontroller` with:
+```
+ipcontroller --reuse --profile=distributed
+```
+
+### Start multiple engines
+
