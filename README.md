@@ -67,3 +67,12 @@ ipcontroller --reuse --profile=distributed --ip=<ip address>
 ipcluster engines --n X --profile=distributed
 ```
 
+# Start the Cluster (with my current configurations/aliases)
+1. Open a terminal. Name the terminal `CONTROLLER`.
+2. Run `start_controller`
+3. Open another terminal.
+4. Create X tabs
+5. SSH + caffeinate into the remote computer on each tab `caffeinate -i ssh acme@...`
+6. On each computer, navigate to `~/Documents/Tanner/ipycluster_config` (including the host, if desired)
+7. Run `./start_engines N` where N is an integer number of the number of engines you would like to start on that computer.
+8. Open ipython or jupyter notebook and have fun!
