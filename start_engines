@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ipcluster engines --n $1 --profile=distributed
