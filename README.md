@@ -63,4 +63,7 @@ ipcontroller --reuse --profile=distributed --ip=<ip address>
 ```
 
 ### Start multiple engines
+```
+ipcluster engines --n X --profile=distributed
+```
 
