@@ -59,7 +59,7 @@ a.get(n)
 ### When connecting
 To avoid updating the connection info all the time, start the `ipcontroller` with:
 ```
-ipcontroller --reuse --profile=distributed
+ipcontroller --reuse --profile=distributed --ip=<ip address>
 ```
 
 ### Start multiple engines
