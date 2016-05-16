@@ -67,3 +67,19 @@ ipcontroller --reuse --profile=distributed --ip=<ip address>
 ipcluster engines --n X --profile=distributed
 ```
 
+# Start the Cluster --profile=distributed (with my current configurations/aliases)
+1. Open a terminal. Name the terminal `CONTROLLER`.
+2. Run `start_controller`
+3. Open another terminal.
+4. Create X tabs
+5. SSH into the remote computer on each tab `ssh acme@...`
+6. On each computer, navigate to `~/Documents/Tanner/ipycluster_config` (including the host, if desired)
+7. Run `caffeinate -i start_engines N` where N is an integer number of the number of engines you would like to start on that computer. `caffeinate` will prevent these remote computers from sleeping.
+8. Open ipython or jupyter notebook and have fun!
+
+### My Preliminaries
+- All systems have the JSON (on git)
+- All all remote machines, in the `ipengine_config.py`, the url_file has been pointed to the correct JSON 
+- start_controller alias
+- start_engine shell script (on git)
+- add location of `ipycluster_config` to the PATH (to be able to call `start_engines`
