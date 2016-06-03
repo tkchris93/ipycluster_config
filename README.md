@@ -83,3 +83,5 @@ ipcluster engines --n X --profile=distributed
 - start_controller alias
 - start_engine shell script (on git)
 - add location of `ipycluster_config` to the PATH (to be able to call `start_engines`
+
+### Forwarding Jupyter Notebook
