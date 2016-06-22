@@ -85,3 +85,10 @@ ipcluster engines --n X --profile=distributed
 - add location of `ipycluster_config` to the PATH (to be able to call `start_engines`
 
 ### Forwarding Jupyter Notebook
+- On machine running the computation, run `jupyter notebook --no-browser --port=8889` where `port` is some unused port
+- On machine where you want to view the notebook, run 
+```
+ssh -N -f -L localhost:8888:localhost:8889 remote_user@remote_host
+``` 
+where `remote_user` and `remote_host` are the login information for the machine where the jupyter notebook was started.
+- To kill this SSH tunnel when you are done, run `ps aux | grep localhost:8889` then kill the process by id.
